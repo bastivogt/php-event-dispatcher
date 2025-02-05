@@ -19,4 +19,10 @@ class CounterEvent extends Event
     {
         return $this->count;
     }
+
+
+    public function __toString()
+    {
+        return "CounterEvent";
+    }
 }
