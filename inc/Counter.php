@@ -37,4 +37,14 @@ class Counter
     {
         return $this->eventDispatcher;
     }
+
+    public function getCount(): int
+    {
+        return $this->count;
+    }
+
+    public function __toString()
+    {
+        return "Counter";
+    }
 }
