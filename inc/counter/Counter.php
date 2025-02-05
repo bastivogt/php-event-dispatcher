@@ -16,12 +16,18 @@ class Counter
 
     public function __construct(int $start = 0, int $stop = 10, int $step = 1)
     {
+        $this->eventDispatcher = EventDispatcher::initialize();
+        $this->reset($start, $stop, $step);
+    }
 
+
+
+    public function reset(int $start = 0, int $stop = 10, int $step = 1)
+    {
         $this->start = $start;
         $this->stop = $stop;
         $this->step = $step;
         $this->count = $this->start;
-        $this->eventDispatcher = EventDispatcher::initialize();
     }
 
 
