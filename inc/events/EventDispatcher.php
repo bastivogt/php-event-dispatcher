@@ -81,6 +81,6 @@ class EventDispatcher
 
     public function __toString()
     {
-        return "EventDispatcher";
+        return "\events\EventDispatcher";
     }
 }

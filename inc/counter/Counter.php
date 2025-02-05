@@ -45,6 +45,6 @@ class Counter
 
     public function __toString()
     {
-        return "Counter";
+        return "\counter\Counter";
     }
 }

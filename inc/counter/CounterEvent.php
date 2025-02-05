@@ -25,6 +25,6 @@ class CounterEvent extends \events\Event
 
     public function __toString()
     {
-        return "CounterEvent";
+        return "\counter\CounterEvent";
     }
 }

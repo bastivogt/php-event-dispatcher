@@ -25,6 +25,6 @@ class Event
 
     public function __toString()
     {
-        return "Event";
+        return "\events\Event";
     }
 }
