@@ -1,5 +1,6 @@
 <?php
 
+namespace events;
 
 class EventDispatcher
 {
@@ -44,11 +45,19 @@ class EventDispatcher
 
     public function removeListener(string $type): bool
     {
+        // if ($this->hasListener($type)) {
+        //     for ($i = 0; $i < count($this->listeners); $i++) {
+        //         if ($this->listeners[$i]["type"] === $type) {
+        //             array_splice($this->listeners, $i, 1);
+        //             return true;
+        //         }
+        //     }
+        // }
+        // return false;
         if ($this->hasListener($type)) {
-            for ($i = 0; $i < count($this->listeners); $i++) {
-                if ($this->listeners[$i]["type"] === $type) {
-                    array_splice($this->listeners, $i, 1);
-                    return true;
+            foreach ($this->listeners as $key => $value) {
+                if ($value["type"] === $type) {
+                    unset($this->listeners[$key]);
                 }
             }
         }

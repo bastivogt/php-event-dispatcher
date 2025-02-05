@@ -1,5 +1,7 @@
 <?php
 
+namespace events;
+
 class Event
 {
     protected object $sender;

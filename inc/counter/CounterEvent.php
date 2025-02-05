@@ -1,6 +1,8 @@
 <?php
 
-class CounterEvent extends Event
+namespace counter;
+
+class CounterEvent extends \events\Event
 {
 
     public const COUNTER_STARTED = "COUNTER_STARTED";
