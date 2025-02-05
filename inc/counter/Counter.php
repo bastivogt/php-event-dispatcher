@@ -1,8 +1,9 @@
 <?php
 
 
-namespace counter;
+namespace sevo\counter;
 
+use sevo\events\EventDispatcher;
 
 class Counter
 {
@@ -10,7 +11,7 @@ class Counter
     private int $stop;
     private int $step;
     private int $count;
-    private \events\EventDispatcher $eventDispatcher;
+    private EventDispatcher $eventDispatcher;
 
 
     public function __construct(int $start = 0, int $stop = 10, int $step = 1)
@@ -20,7 +21,7 @@ class Counter
         $this->stop = $stop;
         $this->step = $step;
         $this->count = $this->start;
-        $this->eventDispatcher = \events\EventDispatcher::initialize();
+        $this->eventDispatcher = EventDispatcher::initialize();
     }
 
 
@@ -34,7 +35,7 @@ class Counter
         $this->eventDispatcher->dispatchEvent(new CounterEvent(CounterEvent::COUNTER_FINISHED, $this, $this->count));
     }
 
-    public function getEventDispatcher(): \events\EventDispatcher
+    public function getEventDispatcher(): EventDispatcher
     {
         return $this->eventDispatcher;
     }

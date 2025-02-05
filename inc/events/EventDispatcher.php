@@ -1,6 +1,6 @@
 <?php
 
-namespace events;
+namespace sevo\events;
 
 class EventDispatcher
 {

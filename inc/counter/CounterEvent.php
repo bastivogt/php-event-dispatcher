@@ -1,8 +1,8 @@
 <?php
 
-namespace counter;
+namespace sevo\counter;
 
-class CounterEvent extends \events\Event
+class CounterEvent extends \sevo\events\Event
 {
 
     public const COUNTER_STARTED = "COUNTER_STARTED";

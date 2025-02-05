@@ -3,8 +3,8 @@
 include "./inc/autoload.php";
 
 
-use counter\CounterEvent;
-use counter\Counter;
+use sevo\counter\CounterEvent;
+use sevo\counter\Counter;
 
 
 $counter = new Counter();
