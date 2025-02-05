@@ -78,9 +78,4 @@ class EventDispatcher
 
         return false;
     }
-
-    public function __toString()
-    {
-        return "\events\EventDispatcher";
-    }
 }

@@ -3,6 +3,7 @@
 
 namespace counter;
 
+
 class Counter
 {
     private int $start;
@@ -41,10 +42,5 @@ class Counter
     public function getCount(): int
     {
         return $this->count;
-    }
-
-    public function __toString()
-    {
-        return "\counter\Counter";
     }
 }

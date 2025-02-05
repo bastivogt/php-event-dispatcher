@@ -22,9 +22,4 @@ class Event
     {
         return $this->type;
     }
-
-    public function __toString()
-    {
-        return "\events\Event";
-    }
 }

@@ -21,10 +21,4 @@ class CounterEvent extends \events\Event
     {
         return $this->count;
     }
-
-
-    public function __toString()
-    {
-        return "\counter\CounterEvent";
-    }
 }
